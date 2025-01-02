@@ -71,6 +71,13 @@ export interface TaskListOptions {
      * @default 'task-list-item-label'
      */
     labelClass?: string;
+
+    /**
+     * Whether to use Tiptap-compatible HTML attributes
+     * When true, adds data-type="taskList" to ul and data-type="taskItem" data-checked to li
+     * @default false
+     */
+    tiptapCompatible?: boolean;
 }
 
 /**
@@ -257,6 +264,10 @@ export function taskLists(md: MarkdownIt, options?: TaskListOptions): void {
                         }
                         if (current >= 0) {
                             tokens[current].attrJoin('class', itemClass);
+                            if (options?.tiptapCompatible) {
+                                tokens[current].attrSet('data-type', 'taskItem');
+                                tokens[current].attrSet('data-checked', checked.toString());
+                            }
                         }
                         
                         // Find the nearest list token
@@ -265,6 +276,9 @@ export function taskLists(md: MarkdownIt, options?: TaskListOptions): void {
                         }
                         if (current >= 0) {
                             tokens[current].attrJoin('class', parentClass);
+                            if (options?.tiptapCompatible) {
+                                tokens[current].attrSet('data-type', 'taskList');
+                            }
                         }
                     }
                 }

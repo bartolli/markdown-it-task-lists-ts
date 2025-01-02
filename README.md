@@ -38,7 +38,8 @@ md.use(taskLists, {
   listClass: 'todo-list', // Custom class for ul elements
   itemClass: 'todo-item', // Custom class for li elements
   checkboxClass: 'todo-checkbox', // Custom class for input elements
-  labelClass: 'todo-label'        // Custom class for label elements
+  labelClass: 'todo-label',        // Custom class for label elements
+  tiptapCompatible: true // Output HTML compatible with Tiptap's task list extension
 });
 
 // Convert markdown to HTML
@@ -91,6 +92,33 @@ The plugin generates semantic HTML with proper ARIA attributes and customizable 
 | itemClass | string | 'task-list-item' | CSS class for the li elements containing tasks. |
 | checkboxClass | string | 'task-list-item-checkbox' | CSS class for the checkbox input elements. |
 | labelClass | string | 'task-list-item-label' | CSS class for the label elements (when label option is true). |
+| tiptapCompatible | boolean | false | Whether to output HTML compatible with Tiptap's task list extension |
+
+### Tiptap Compatibility
+
+When `tiptapCompatible` is set to `true`, the plugin will output HTML that is compatible with Tiptap's task list extension:
+
+```html
+<ul data-type="taskList">
+  <li data-type="taskItem" data-checked="false">Unchecked task</li>
+  <li data-type="taskItem" data-checked="true">Checked task</li>
+</ul>
+```
+
+This is useful when using the plugin with Tiptap's `TaskList` and `TaskItem` extensions.
+
+Example:
+```typescript
+import MarkdownIt from 'markdown-it';
+import taskLists, { type TaskListOptions } from 'markdown-it-task-lists-ts';
+
+const md = new MarkdownIt();
+md.use(taskLists, {
+  enabled: true,
+  label: true,
+  tiptapCompatible: true
+});
+```
 
 ## Styling
 
