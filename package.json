@@ -1,0 +1,40 @@
+{
+  "name": "markdown-it-task-lists-ts",
+  "version": "1.0.0",
+  "description": "A TypeScript-first markdown-it plugin that converts GitHub-style task lists to HTML checkboxes",
+  "main": "dist/markdown-it-task-lists.js",
+  "types": "dist/markdown-it-task-lists.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "task-lists",
+    "todo",
+    "checkbox",
+    "typescript"
+  ],
+  "author": "TypeDown Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typedown/markdown-it-task-lists-ts"
+  },
+  "bugs": {
+    "url": "https://github.com/typedown/markdown-it-task-lists-ts/issues"
+  },
+  "homepage": "https://github.com/typedown/markdown-it-task-lists-ts#readme",
+  "peerDependencies": {
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^13.0.7",
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.7.2"
+  }
+}
