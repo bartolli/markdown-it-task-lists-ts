@@ -23,7 +23,7 @@ yarn add markdown-it-task-lists-ts
 
 ```typescript
 import MarkdownIt from 'markdown-it';
-import { taskLists } from 'markdown-it-task-lists-ts';
+import taskLists, { type TaskListOptions } from 'markdown-it-task-lists-ts';
 
 const md = new MarkdownIt();
 

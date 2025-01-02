@@ -17,16 +17,16 @@
     "checkbox",
     "typescript"
   ],
-  "author": "TypeDown Team",
+  "author": "bartolli",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/typedown/markdown-it-task-lists-ts"
+    "url": "git+https://github.com/bartolli/markdown-it-task-lists-ts.git"
   },
   "bugs": {
-    "url": "https://github.com/typedown/markdown-it-task-lists-ts/issues"
+    "url": "https://github.com/bartolli/markdown-it-task-lists-ts/issues"
   },
-  "homepage": "https://github.com/typedown/markdown-it-task-lists-ts#readme",
+  "homepage": "https://github.com/bartolli/markdown-it-task-lists-ts#readme",
   "peerDependencies": {
     "markdown-it": "^14.1.0"
   },
