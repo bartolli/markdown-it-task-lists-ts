@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-task-lists-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A TypeScript-first markdown-it plugin that converts GitHub-style task lists to HTML checkboxes",
   "main": "dist/markdown-it-task-lists.js",
   "types": "dist/markdown-it-task-lists.d.ts",
