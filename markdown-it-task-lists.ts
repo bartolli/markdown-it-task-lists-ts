@@ -5,7 +5,7 @@
  * @example
  * ```typescript
  * import MarkdownIt from 'markdown-it';
- * import { taskLists } from 'markdown-it-task-lists';
+ * import taskLists, { type TaskListOptions } from 'markdown-it-task-lists-ts';
  * 
  * const md = new MarkdownIt();
  * md.use(taskLists, {
